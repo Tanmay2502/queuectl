@@ -1,0 +1,21 @@
+{
+  "name": "queuectl",
+  "version": "1.0.0",
+  "bin": {
+    "queuectl": "./bin/queuectl.js"
+  },
+  "scripts": {
+    "start": "node ./bin/queuectl.js",
+    "enqueue": "node ./bin/queuectl.js enqueue",
+    "worker": "node ./bin/queuectl.js worker:start --count 1",
+    "worker:multi": "node ./bin/queuectl.js worker:start --count 3",
+    "status": "node ./bin/queuectl.js status",
+    "list": "node ./bin/queuectl.js list --state pending",
+    "dlq": "node ./bin/queuectl.js list --state dead",
+    "dlq:retry": "node ./bin/queuectl.js dlq:retry"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "uuid": "^9.0.0"
+  }
+}
