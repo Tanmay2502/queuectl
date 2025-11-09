@@ -129,6 +129,8 @@ npm run dlq
 npm run dlq:retry -- <job_id>
 npm run status
 
+Test Video Link: https://drive.google.com/drive/folders/1oZlBUiDTlmfr1qhSoPbMt35TK7apht3r?usp=sharing
+
 🧾 Assumptions & Trade-offs
 
 Storage: Chose JSON over SQLite for simplicity & portability (no native dependencies).
@@ -138,16 +140,6 @@ Concurrency: Workers run sequentially within Node process; suitable for small-sc
 Backoff Base: Default exponential base is 2 (delay = 2^attempts seconds).
 
 Graceful Shutdown: Workers complete current job before stopping on Ctrl+C.
-
-💡 Future Improvements
-
-Add queuectl config command to change retry/backoff dynamically.
-
-Job scheduling (run_at field support).
-
-Job priority queues.
-
-Logging and metrics dashboard (web UI).
 
 🧍‍♂️ Author
 
