@@ -1,0 +1,125 @@
+{
+  "jobs": [
+    {
+      "id": "a9a9fd5a-7fa4-413d-b87b-d22bf38b8832",
+      "command": "echo Hello QueueCTL",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "run_at": 0,
+      "created_at": 1762686157488,
+      "updated_at": 1762686166331,
+      "last_error": null
+    },
+    {
+      "id": "0b5695ae-627a-42d8-8bd4-98c2684ab705",
+      "command": "nonexistentcommand",
+      "state": "dead",
+      "attempts": 4,
+      "max_retries": 3,
+      "run_at": 1762687296559,
+      "created_at": 1762686297510,
+      "updated_at": 1762687296583,
+      "last_error": "/bin/sh: nonexistentcommand: command not found\n"
+    },
+    {
+      "id": "6d3e5c42-e33b-4c9d-a7ea-67b6e4e82f0f",
+      "command": "sleep 1 && echo job1npm run enqueue sleep 1 && echo job2npm run enqueue -- sleep 1 && echo job3",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "run_at": 0,
+      "created_at": 1762686477363,
+      "updated_at": 1762686478837,
+      "last_error": null
+    },
+    {
+      "id": "3fbd73ad-2084-4ed4-850f-694b9ed05f35",
+      "command": "sleep 1 && echo job1",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "run_at": 0,
+      "created_at": 1762686652937,
+      "updated_at": 1762686672669,
+      "last_error": null
+    },
+    {
+      "id": "edbf76c1-df1b-4065-8687-7a8c14044229",
+      "command": "sleep 1 && echo job2",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "run_at": 0,
+      "created_at": 1762686653027,
+      "updated_at": 1762686673684,
+      "last_error": null
+    },
+    {
+      "id": "c52b20e0-1163-486e-b219-424b0a9fe389",
+      "command": "sleep 1 && echo job3",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "run_at": 0,
+      "created_at": 1762686653120,
+      "updated_at": 1762686674703,
+      "last_error": null
+    },
+    {
+      "id": "0049efdd-04e0-48c1-b93c-c19f42654846",
+      "command": "badcommand123",
+      "state": "dead",
+      "attempts": 4,
+      "max_retries": 3,
+      "run_at": 1762686927661,
+      "created_at": 1762686875212,
+      "updated_at": 1762686927684,
+      "last_error": "/bin/sh: badcommand123: command not found\n"
+    },
+    {
+      "id": "931f8226-da61-4daf-b4a6-8044dab9a599",
+      "command": "sleep 3 && echo persisted",
+      "state": "completed",
+      "attempts": 1,
+      "max_retries": 3,
+      "run_at": 1762687105516,
+      "created_at": 1762687094604,
+      "updated_at": 1762687126490,
+      "last_error": "exit:null"
+    },
+    {
+      "id": "6286871f-c334-4fb6-adf5-f0e188af9079",
+      "command": "sleep 10 && echo done",
+      "state": "completed",
+      "attempts": 1,
+      "max_retries": 3,
+      "run_at": 1762687496555,
+      "created_at": 1762687486125,
+      "updated_at": 1762687506903,
+      "last_error": "exit:null"
+    },
+    {
+      "id": "ea916fb1-4b6f-4044-84f3-99b9ca9403ce",
+      "command": "id:job-ok command:echo done && sleep 1 max_retries:3",
+      "state": "dead",
+      "attempts": 4,
+      "max_retries": 3,
+      "run_at": 1762687611320,
+      "created_at": 1762687591514,
+      "updated_at": 1762687611359,
+      "last_error": "/bin/sh: id:job-ok: command not found\n"
+    },
+    {
+      "id": "d5800437-7c6a-4b0b-836e-8851f1c80cf3",
+      "command": "id:job-bad command:nonexistentcommand max_retries:2",
+      "state": "dead",
+      "attempts": 4,
+      "max_retries": 3,
+      "run_at": 1762687611332,
+      "created_at": 1762687591541,
+      "updated_at": 1762687611370,
+      "last_error": "/bin/sh: id:job-bad: command not found\n"
+    }
+  ]
+}
